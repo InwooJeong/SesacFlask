@@ -21,7 +21,7 @@ def detect_lang():
     # 5. 응답 데이터 구성
     return f'언어 감지 페이지 : {ori_text}'
 
-# http://127.0.0.1:5000/ssgo
+# http://127.0.0.1:5001/ssgo
 # 1개의 url에서 method에 따라 처리를 달리하겟다
 @app.route('/ssgo', methods=['GET','POST'])
 def ssgo():    
@@ -43,4 +43,4 @@ def ssgo():
         return jsonify(res)
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(debug=True, port=5001)

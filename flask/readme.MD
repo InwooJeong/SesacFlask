@@ -34,17 +34,20 @@
     - FE(Client)
         - html5 : 콘텐츠 담당, 뼈대 => 데이터 존재
             - 데이터
+            - 요소(엘리먼트) 이해
+            - 구조, 속성(id, class), 입력태그(input, textarea, ...)
         - css3 : 레이아웃, 디자인, 애니메이션(키프레임), 반응형
-            - css selector, xpath
+            - css selector, xpath -> 요소를 특정하는 방법
             - bootstrap등 이미 완성된 디자인 모듈 활용
                 - adminlte.io
         - js : 인터렉션, 이벤트, 통신, 동적구성
             - javascript > es next > type script
-                - react, angular, vue
+                - react, angular, vue => SPA(Single Page Application)
             - 클라이언트 - 서버로 데이터 보내는 방법
                 - form 전송 -> 로그인 등 화면 깜빡임
                 - ajax 통신 -> 백그라운드 통신
                 - 웹소켓 -> 백그라운드 통신, 쌍방향통신, 푸시 -> 챗봇 베이스
+            - 개발 생산성을 높이기 위해 라이브러리 사용 => jQuery, ...
     - BE(Server)
         - flask
             - 같은 포지션, Django, Fastapi, Springboot, node.js, .net, php, ...
@@ -56,7 +59,7 @@
 
 # 프로젝트 구조
     /
-    L f1.py
+    L f2.py     : 서비스 엔트리 포인트(차후 이름은 app.py 수정)
     L static    : 정적 데이터가 위치하는 곳, 라우팅 필요 없음 
                 : *.js, *.css, *.이미지파일(png,...)
     L templates : html 위치
