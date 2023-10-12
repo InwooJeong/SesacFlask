@@ -22,9 +22,21 @@
 # 설치
     - 가상환경 구축
          - 하나의 머신에서 여러개 프로젝트, 서비스 가동 시 특정 패키지들 버전 충돌 방지 -> 격리, 샌드박스
-    - 필요 패키지 설치 -> 특정 버전(개발 시) 기록 -> requirements.txt
-        - pip install flask
-        - pip list
+         - 가상환경 생성(현재 프로젝트 위치에서 수행)
+            - python -m venv was
+         - 활성화
+            - 윈도우 기준 활성화 파일 위치
+                - ~/was/Scripts/activate.bat
+                - (was) 프럼프트(경로) > 
+                    - (was)> pip list
+        - 필요한 패키지 설치
+            - 명령어로 생성(코랩에서 진행)
+                - pip freeze > requirements.txt
+                - 이미 깔려있는 것들 다 기록됨
+                - 필요한 것 만 카피해서 로컬 requirements.txt 수정
+            - (was)> pip install -r requirements.txt
+                - txt 경로는 상황에 맞춰 조정
+            - (was) > pip list
 
 # 최초코드
     - f1.py 참고
@@ -59,7 +71,14 @@
 
 # 프로젝트 구조
     /
-    L f2.py     : 서비스 엔트리 포인트(차후 이름은 app.py 수정)
+    L basic     :flask를 익히기 위한 예제
+        L f1.py
+        L f2.py
+        L template.py
+    L app.py     : 서비스 엔트리 포인트
     L static    : 정적 데이터가 위치하는 곳, 라우팅 필요 없음 
                 : *.js, *.css, *.이미지파일(png,...)
     L templates : html 위치
+        L index.html
+    L requirements.txt : 해당 프로젝트에서 사용하는 라이브러리
+    L readme.MD : 설명 파일
